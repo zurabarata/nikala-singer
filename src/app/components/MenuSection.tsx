@@ -12,8 +12,8 @@ export function MenuSection({ section }: MenuSectionProps) {
         {section.title}
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-12">
-        {section.items.map((item, index) => (
-          <MenuItemCard key={index} item={item} />
+        {section.items.map((item) => (
+          <MenuItemCard key={`${item.name}-${item.price}`} item={item} />
         ))}
       </div>
     </section>

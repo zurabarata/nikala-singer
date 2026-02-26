@@ -1,17 +1,34 @@
 import { createBrowserRouter } from "react-router";
-import { Layout } from "@/app/components/Layout";
-import { Home } from "@/app/components/Home";
-import { Menu } from "@/app/components/Menu";
-import { Location } from "@/app/components/Location";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: Layout,
+    lazy: async () => {
+      const { Layout } = await import("@/app/components/Layout");
+      return { Component: Layout };
+    },
     children: [
-      { index: true, Component: Home },
-      { path: "menu", Component: Menu },
-      { path: "standort", Component: Location },
+      {
+        index: true,
+        lazy: async () => {
+          const { Home } = await import("@/app/components/Home");
+          return { Component: Home };
+        },
+      },
+      {
+        path: "menu",
+        lazy: async () => {
+          const { Menu } = await import("@/app/components/Menu");
+          return { Component: Menu };
+        },
+      },
+      {
+        path: "standort",
+        lazy: async () => {
+          const { Location } = await import("@/app/components/Location");
+          return { Component: Location };
+        },
+      },
     ],
   },
 ]);
