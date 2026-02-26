@@ -7,9 +7,9 @@ export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-page-surface font-mono overflow-x-hidden">
+    <div className="min-h-svh h-dvh overflow-y-auto overscroll-y-contain [-webkit-overflow-scrolling:touch] bg-page-surface font-mono overflow-x-hidden">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-page-surface z-50 border-b border-border overflow-x-hidden">
+      <header className="sticky top-0 bg-page-surface z-50 border-b border-border">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex items-center justify-between relative min-h-[2.5rem]">
             {/* Left Navigation - Desktop */}
@@ -76,7 +76,7 @@ export function Layout() {
       </header>
 
       {/* Main Content */}
-      <main className="pt-20 sm:pt-24">
+      <main>
         <Outlet />
       </main>
     </div>
