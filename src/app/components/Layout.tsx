@@ -63,6 +63,13 @@ export function Layout() {
                   {NAVIGATION.home.label}
                 </Link>
                 <Link
+                  to={NAVIGATION.location.path}
+                  className="hover:underline"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {NAVIGATION.location.label}
+                </Link>
+                <Link
                   to={NAVIGATION.menu.path}
                   className="hover:underline"
                   onClick={() => setMobileMenuOpen(false)}
