@@ -9,6 +9,9 @@ A minimalist restaurant website for Nikala SINGER, a Georgian restaurant in Hann
 - Multiple pages: Home, Menu, and Location
 - Georgian cuisine menu with detailed descriptions
 - Contact information and location map
+- Vercel Analytics and Speed Insights integration
+- SPA routing support on Vercel (deep-link rewrites + route error fallback)
+- Production SEO basics (canonical metadata, `robots.txt`, `sitemap.xml`)
 
 ## Tech Stack
 
@@ -17,6 +20,7 @@ A minimalist restaurant website for Nikala SINGER, a Georgian restaurant in Hann
 - Tailwind CSS 4
 - Vite
 - TypeScript
+- Vercel (static hosting with `vercel.json` rewrites and headers)
 
 ## Project Structure
 
@@ -29,7 +33,8 @@ src/app/
 │   ├── Location.tsx    # Location/contact page
 │   ├── Menu.tsx        # Menu page
 │   ├── MenuItemCard.tsx    # Individual menu item
-│   └── MenuSection.tsx     # Menu section wrapper
+│   ├── MenuSection.tsx     # Menu section wrapper
+│   └── RouteErrorBoundary.tsx # Route-level error UI
 ├── constants/          # Application constants
 │   └── index.ts       # Restaurant info, navigation, URLs
 ├── data/              # Static data
@@ -40,6 +45,8 @@ src/app/
 └── routes.tsx         # Route configuration
 
 src/styles/            # Global styles
+public/                # Static assets (images, robots.txt, sitemap.xml)
+vercel.json            # Vercel rewrites and security headers
 ```
 
 ## Architecture Principles
@@ -65,9 +72,24 @@ pnpm install
 # Start development server
 pnpm dev
 
+# Run typecheck + production build
+pnpm check
+
 # Build for production
 pnpm build
 ```
+
+## Deployment (Vercel)
+
+- Framework preset: Vite
+- Build output: `dist`
+- SPA rewrite: `/(.*)` -> `/index.html`
+- Security headers configured in `vercel.json`:
+  - `X-Content-Type-Options: nosniff`
+  - `X-Frame-Options: DENY`
+  - `Referrer-Policy: strict-origin-when-cross-origin`
+  - `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+  - `Strict-Transport-Security: max-age=31536000`
 
 ## Restaurant Information
 
