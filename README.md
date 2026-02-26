@@ -12,7 +12,7 @@ A minimalist restaurant website for Nikala SINGER, a Georgian restaurant in Hann
 
 ## Tech Stack
 
-- React 18
+- React 19
 - React Router 7
 - Tailwind CSS 4
 - Vite
@@ -54,7 +54,7 @@ src/styles/            # Global styles
 
 ### Prerequisites
 
-- Node.js 18+ and pnpm
+- Node.js ^20.19.0 (or >=22.12.0) and pnpm
 
 ### Installation
 
