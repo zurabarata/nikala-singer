@@ -1,6 +1,6 @@
-import { menuSections } from "../data/menu";
-import { MenuSection } from "./MenuSection";
-import { Footer } from "./Footer";
+import { menuSections } from "@/app/data/menu";
+import { MenuSection } from "@/app/components/MenuSection";
+import { Footer } from "@/app/components/Footer";
 
 export function Menu() {
   return (

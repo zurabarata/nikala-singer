@@ -1,5 +1,5 @@
-import type { MenuSection as MenuSectionType } from "../types/menu";
-import { MenuItemCard } from "./MenuItemCard";
+import type { MenuSection as MenuSectionType } from "@/app/types/menu";
+import { MenuItemCard } from "@/app/components/MenuItemCard";
 
 interface MenuSectionProps {
   section: MenuSectionType;

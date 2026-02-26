@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router";
-import { Layout } from "./components/Layout";
-import { Home } from "./components/Home";
-import { Menu } from "./components/Menu";
-import { Location } from "./components/Location";
+import { Layout } from "@/app/components/Layout";
+import { Home } from "@/app/components/Home";
+import { Menu } from "@/app/components/Menu";
+import { Location } from "@/app/components/Location";
 
 export const router = createBrowserRouter([
   {
