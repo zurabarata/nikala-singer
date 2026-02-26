@@ -1,0 +1,12 @@
+---
+description: React component patterns and file locations
+globs: "**/*.tsx"
+alwaysApply: false
+---
+
+# React Components
+
+- Use functional components and hooks.
+- Import shared UI from `@/app/components/ui/`; use `cn()` from `@/app/components/ui/utils` for class merging.
+- Pages live under `src/app/components/` (Layout, Home, Menu, Location, Footer); routing in `src/app/routes.tsx` with Layout and child routes.
+- For mobile-only logic use `useIsMobile()` from `@/app/components/ui/use-mobile.ts` (`max-width: 767px`, i.e. `<768px`).

@@ -1,0 +1,13 @@
+---
+description: Build and tooling guardrails for Vite, TypeScript, and package setup
+globs: "vite.config.ts,package.json,tsconfig.json,tsconfig.node.json"
+alwaysApply: false
+---
+
+# Build & Tooling
+
+- Use `pnpm` for dependency and script workflows.
+- Keep both Vite plugins enabled in `vite.config.ts`: `react()` and `tailwindcss()`.
+- Keep the `@` alias mapped to `./src` consistently in both Vite and TypeScript config.
+- Do not add `.css`, `.ts`, or `.tsx` patterns to `assetsInclude` in `vite.config.ts`.
+- Verify stack compatibility before major version bumps (React 18, Vite 6, Tailwind 4).

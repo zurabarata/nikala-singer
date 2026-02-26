@@ -1,0 +1,13 @@
+---
+description: Core project conventions for Nikala SINGER (stack, paths, data, copy)
+alwaysApply: true
+---
+
+# Project Conventions
+
+- **Stack:** React 18, Vite 6, React Router 7, Tailwind 4, TypeScript.
+- **Path alias:** Use `@/` for `src/` (e.g. `import { cn } from '@/app/components/ui/utils'`).
+- **Package manager:** pnpm.
+- **Single source of truth:** Restaurant info and nav in `src/app/constants/index.ts`; menu in `src/app/data/menu.ts`. Do not duplicate.
+- **Copy:** UI and labels are in German (Hauptseite, Menü, Standort, etc.).
+- **Rule precedence:** `.cursor/rules/*.mdc` are the canonical guardrails; skills should complement, not override, these rules.

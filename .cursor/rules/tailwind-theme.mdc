@@ -1,0 +1,12 @@
+---
+description: Tailwind and theme token usage
+globs: "**/styles/**/*.css,**/*.tsx"
+alwaysApply: false
+---
+
+# Tailwind & Theme
+
+- Prefer theme tokens from `src/styles/theme.css` (e.g. `bg-background`, `text-foreground`, `border-border`) over arbitrary colors.
+- Use Tailwind utility classes; avoid inline styles unless necessary for dynamic values.
+- Global styles and Tailwind entry: `src/styles/index.css`.
+- Keep `src/styles/index.css` imports as the canonical style entrypoint (`fonts.css`, `tailwind.css`, `theme.css`) unless doing a deliberate styling refactor.
