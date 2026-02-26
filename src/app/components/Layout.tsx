@@ -1,15 +1,15 @@
 import { Outlet, Link } from "react-router";
 import { Instagram, Menu as MenuIcon, X } from "lucide-react";
 import { useState } from "react";
-import { RESTAURANT_INFO, NAVIGATION } from "../constants";
+import { RESTAURANT_INFO, NAVIGATION } from "@/app/constants";
 
 export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#f5f5f0] font-mono overflow-x-hidden">
+    <div className="min-h-screen bg-page-surface font-mono overflow-x-hidden">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-[#f5f5f0] z-50 border-b border-black/10 overflow-x-hidden">
+      <header className="fixed top-0 left-0 right-0 bg-page-surface z-50 border-b border-border overflow-x-hidden">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex items-center justify-between relative min-h-[2.5rem]">
             {/* Left Navigation - Desktop */}
@@ -26,7 +26,7 @@ export function Layout() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="sm:hidden shrink-0 z-10"
-              aria-label="Toggle menu"
+              aria-label="Menü umschalten"
             >
               {mobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
             </button>
@@ -53,7 +53,7 @@ export function Layout() {
 
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
-            <div className="sm:hidden mt-4 pt-4 border-t border-black/10">
+            <div className="sm:hidden mt-4 pt-4 border-t border-border">
               <div className="flex flex-col gap-4">
                 <Link
                   to={NAVIGATION.home.path}

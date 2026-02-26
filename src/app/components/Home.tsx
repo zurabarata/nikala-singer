@@ -1,5 +1,5 @@
-import { RESTAURANT_INFO, HERO_IMAGE_URL } from "../constants";
-import { Footer } from "./Footer";
+import { RESTAURANT_INFO, HERO_IMAGE_URL } from "@/app/constants";
+import { Footer } from "@/app/components/Footer";
 
 export function Home() {
   return (
@@ -17,7 +17,7 @@ export function Home() {
         <div className="max-w-md mx-auto mb-8 sm:mb-12">
           <img
             src={HERO_IMAGE_URL}
-            alt="Singer sewing machine with wine bottle and dumplings"
+            alt="Singer-Nähmaschine mit Weinflasche und Chinkali"
             className="w-full h-auto"
           />
         </div>

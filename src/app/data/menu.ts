@@ -1,4 +1,4 @@
-import type { MenuSection } from "../types/menu";
+import type { MenuSection } from "@/app/types/menu";
 
 export const appetizers: MenuSection = {
   title: "Vorspeisen",
