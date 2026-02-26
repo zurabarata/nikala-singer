@@ -1,0 +1,5 @@
+/* Custom font imports – add @import or @font-face as needed */
+/* Example for a monospace/typewriter look (README mentions monospace typography):
+   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+   :root { --font-mono: 'JetBrains Mono', monospace; }
+*/
