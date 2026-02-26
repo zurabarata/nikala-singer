@@ -1,0 +1,16 @@
+---
+description: Performance-focused React coding guardrails adapted from Vercel React Best Practices
+globs: "src/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Vercel React Best Practices
+
+- Source of truth: `.cursor/skills/vercel-react-best-practices/rules/` (Vercel Labs `react-best-practices` skill).
+- Prioritize highest-impact categories first:
+  - Eliminate async waterfalls (`async-*`): start promises early and await as late as possible; use `Promise.all` for independent work.
+  - Reduce bundle size (`bundle-*`): avoid heavy imports on initial render; conditionally/dynamically load non-critical code.
+  - Improve re-render behavior (`rerender-*`): derive state during render when possible, narrow effect dependencies, and avoid unnecessary memoization.
+  - Improve rendering cost (`rendering-*`): prefer explicit conditional rendering, hoist static JSX, and avoid expensive hidden work.
+- For this repo (Vite + React Router), apply generic React/JS rules directly.
+- Apply Next.js-specific rules only when Next.js APIs are present in the changed code (e.g., `next/dynamic`, RSC, server actions, `after()`, `React.cache()` in Next server contexts).

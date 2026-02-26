@@ -26,6 +26,7 @@ description: Project workflow and structure for the Nikala SINGER restaurant web
 ## Conventions
 
 - **Rule hierarchy:** `.cursor/rules/*.mdc` are canonical. This skill provides project workflow/context and should not override rule files.
+- **Performance guidance:** Use `.cursor/skills/vercel-react-best-practices/rules/` for React performance and code-quality refactors.
 - **Single source of truth:** Restaurant info and nav live in `constants/index.ts`; menu in `data/menu.ts`. Do not duplicate.
 - **New menu sections:** Add a section object (title + items) in `data/menu.ts`, then append to `menuSections`.
 - **New routes:** Add in `src/app/routes.tsx` under the Layout child routes; add nav links in `Layout.tsx` and `Footer.tsx` using `NAVIGATION` from constants.
