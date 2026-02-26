@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router";
+import { RouteErrorBoundary } from "@/app/components/RouteErrorBoundary";
 
 export const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <RouteErrorBoundary />,
     lazy: async () => {
       const { Layout } = await import("@/app/components/Layout");
       return { Component: Layout };
