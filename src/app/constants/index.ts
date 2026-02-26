@@ -22,4 +22,4 @@ export const NAVIGATION = {
 } as const;
 
 export const HERO_IMAGE_URL =
-  "https://images.squarespace-cdn.com/content/v1/68bc52ec892dac7940e5051a/7da83241-7275-4547-8125-11ac8b7ea180/Nikala+SINGER+hannover+restaurant.png?format=1500w";
+  "/images/hero-singer.webp";
